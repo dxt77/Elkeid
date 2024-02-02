@@ -47,5 +47,6 @@ func main() {
 	e.AddHandler(time.Hour*6, &VolumeHandler{})
 	e.AddHandler(time.Hour, &KmodHandler{})
 	e.AddHandler(engine.BeforeDawn(), &AppHandler{})
+	e.AddHandler(time.Hour, &CustomHandler{})
 	e.Run()
 }
